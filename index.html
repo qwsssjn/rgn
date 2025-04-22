@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<style>
+body {
+  background: linear-gradient(#F873F5FF, #F873F5FF);
+  font-family: 'Helvetica', sans-serif;
+}
+.heart {
+  animation: pulse 1s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+</style>
+</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellow Love Confession</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="loveMessage"> 我喜欢你 你是我生命中最温暖的存在❤️</h1>
+        <button id="changeText" onclick="changeMessage()">点击换一句</button>
+        <img src="heart.png" alt="♥" class="heart">
+        <!-- 新增背景音乐 -->
+        <audio id="backgroundMusic" autoplay loop>
+            <source src="romantic-music.mp3" type="audio/mpeg">
+            <!-- 备用音频格式（兼容性） -->
+            <source src="romantic-music.ogg" type="audio/ogg">
+            <!-- 若无法播放，显示提示文本 -->
+            <p>您的浏览器不支持自动播放音乐，请手动点击播放按钮：
+                <button onclick="document.getElementById('backgroundMusic').play()">播放音乐</button>
+            </p>
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
